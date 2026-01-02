@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Mobile: AI Evolution</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pubg-orange: #ff9c00;
+            --pubg-dark: #0b0b0b;
+            --pubg-gray: #1a1a1a;
+            --pubg-text: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--pubg-dark);
+            color: var(--pubg-text);
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .nav-link {
+            font-family: 'Teko', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 4px solid var(--pubg-orange);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            color: var(--pubg-orange);
+            text-shadow: 4px 4px 0px #000;
+            line-height: 0.9;
+        }
+
+        /* Custom Cards & Sections */
+        .info-card {
+            background: var(--pubg-gray);
+            border-left: 5px solid var(--pubg-orange);
+            padding: 30px;
+            margin-bottom: 20px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            background: #252525;
+            box-shadow: 0 10px 20px rgba(255, 156, 0, 0.2);
+        }
+
+        .img-framed {
+            border: 3px solid var(--pubg-orange);
+            border-radius: 8px;
+            box-shadow: 10px 10px 0px rgba(255, 156, 0, 0.1);
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .highlight {
+            color: var(--pubg-orange);
+            font-weight: bold;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .navbar {
+            background-color: rgba(0,0,0,0.95) !important;
+            border-bottom: 2px solid var(--pubg-orange);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-size: 1.2rem;
+            margin: 0 10px;
+        }
+
+        .nav-link:hover {
+            color: var(--pubg-orange) !important;
+        }
+
+        .footer {
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .update-badge {
+            background: var(--pubg-orange);
+            color: black;
+            padding: 5px 20px;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            .hero h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">PUBG <span class="text-warning">TALKS</span></a>
+            <button class="navbar-toggler navbar-dark border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solution">PowNin AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#upcoming">Future</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container" data-aos="zoom-out" data-aos-duration="1500">
+            <span class="update-badge">VERSION 4.1 "FROSTY FUNLAND"</span>
+            <h1>THE EVOLUTION OF<br>AI COMPANIONS</h1>
+            <p class="lead text-uppercase fw-bold mt-3">From Cosmetic Pets to Combat Partners</p>
+            <a href="#overview" class="btn btn-warning btn-lg mt-4 px-5 py-3 fw-bold rounded-0">EXPLORE UPDATE</a>
+        </div>
+    </header>
+
+    <section id="overview" class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h2 class="display-5 mb-4 fw-bold">01. Meet <span class="text-warning">PowNin</span></h2>
+                <div class="info-card">
+                    <p class="fs-5">The v4.1 update introduces <span class="highlight">PowNin</span>, a ninja-style penguin that acts as an active AI teammate. Unlike older companions, PowNin can fight, assist, and communicate in real-time.</p>
+                </div>
+                <div class="mt-4 info-card" style="border-left-color: #ff4444;">
+                    <h3 class="h5 text-danger">The Problem</h3>
+                    <p>Matches often felt lonely for solo players. Old companions were merely cosmetic. PowNin solves this by providing tactical support and reducing isolation.</p>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="PUBG-Mobile-4.1-Update-1024x576.jpg" alt="PowNin AI Companion" class="img-framed shadow-lg">
+                <p class="text-center mt-3 text-secondary small"><i>PowNin Interface: Combat & Voice Enabled</i></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="bg-dark">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Agentic AI Capabilities</h2>
+                <div class="bg-warning mx-auto" style="height: 4px; width: 80px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <h3 class="text-warning">Combat Mode</h3>
+                        <p>Deals damage with small shurikens and uses a <span class="highlight">Large Explosive Shuriken</span> that sticks to enemies for a 5-second countdown blast.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-up" data-aos-delay="200">
+                    <div class="info-card">
+                        <h3 class="text-warning">Tactical Support</h3>
+                        <p>PowNin can <span class="highlight">revive teammates</span>, recall eliminated squad members, and automatically share essential healing items.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-up" data-aos-delay="300">
+                    <div class="info-card">
+                        <h3 class="text-warning">NVIDIA ACE Voice</h3>
+                        <p>Advanced interaction allows PowNin to understand English voice commands and reply with human-like tones based on player context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-md-6 order-2 order-md-1" data-aos="zoom-in">
+                <div class="p-5 bg-warning text-dark text-center">
+                    <h2 class="fw-bold">GAME CHANGER</h2>
+                    <p class="mb-0 fs-5">"Stronger emotional attachment because PowNin helps get kills and celebrates your victory!"</p>
+                </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2" data-aos="fade-up">
+                <h2 class="display-5 fw-bold">Player Response</h2>
+                <p class="lead">Analytics show a massive shift in player engagement. PowNin is a high-value asset, with only one spawning per match, creating a new "High-Tier" loot objective.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><span class="text-warning">✔</span> Reduces solo-player isolation</li>
+                    <li class="mb-2"><span class="text-warning">✔</span> Automatic squad support</li>
+                    <li><span class="text-warning">✔</span> Balanced competitive gameplay</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming" style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2071') center/cover;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-4 text-warning fw-bold">NEXT UP: v4.2</h2>
+                    <p class="fs-4">The evolution continues beyond the penguin.</p>
+                    <div class="info-card bg-transparent border-warning text-white mt-4" style="border: 2px solid var(--pubg-orange)">
+                        <p class="mb-0 fw-bold">In the v4.2 update, PUBG Mobile will introduce a tree-like companion inspired by <span class="text-warning">Groot</span>, featuring enhanced emotional AI and deeper immersion.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in-left">
+                    <img src="f95046_658450f7bf2b43c28222aec84c95ea15~mv2.avif" alt="Upcoming Groot Companion" class="img-framed">
+                    <p class="text-center mt-3 text-warning"><i>Leaked Concept: v4.2 Nature Companion</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-1 fw-bold text-uppercase">Winner Winner Chicken Dinner!</p>
+            <p class="mb-0 text-secondary small">&copy; 2026 PUBG Mobile Fan Portal | AI Evolution Series</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
+</html>
